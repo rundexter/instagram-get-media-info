@@ -10,7 +10,7 @@
         }
     ],
     //Required. Outputs the module emits.
-    
+
     "outputs": [
         {
             "id": "username",

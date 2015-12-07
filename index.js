@@ -85,7 +85,6 @@ module.exports = {
      * Set acess token.
      *
      * @param dexter
-     * @param spotifyApi
      */
     authParams: function (dexter) {
 
@@ -122,19 +121,20 @@ module.exports = {
         if (!mediaId) {
 
             this.fail('A [mediaId] is Required.');
+        } else {
+
+            this.authParams(dexter);
+
+            ig.media(mediaId, function (err, result) {
+
+                if (err) {
+
+                    this.fail(err);
+                } else {
+
+                    this.complete(this.pickResult(result, globalPickResult));
+                }
+            }.bind(this));
         }
-
-        this.authParams(dexter);
-
-        ig.media(mediaId, function (err, result) {
-
-            if (err) {
-
-                this.fail(err);
-            } else {
-
-                this.complete(this.pickResult(result, globalPickResult));
-            }
-        }.bind(this));
     }
 };
