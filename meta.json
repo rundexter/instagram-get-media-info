@@ -45,5 +45,6 @@
             "title":"URL"
         }
     ],
+    "icon": "instagram",
     "title": "Instagram Get Media Info" /* Required.A display name for the module */
 }
