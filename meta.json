@@ -45,6 +45,10 @@
             "title":"URL"
         }
     ],
+    "providers": [{
+        "name": "instagram",
+        "scopes": [ "basic", "public_content" ]
+    }],
     "icon": "instagram",
     "title": "Instagram Get Media Info" /* Required.A display name for the module */
 }
